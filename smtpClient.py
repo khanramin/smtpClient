@@ -10,7 +10,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # Create socket called clientSocket and establish a TCP connection with mailserver and port
     # Fill in start
     clientSocket = socket(AF_INET, SOCK_STREAM)
-    clientSocket.connect('smtp.telus.net',25)
+    clientSocket.connect(mailserver)
     # Fill in end
 
     recv = clientSocket.recv(1024).decode()
